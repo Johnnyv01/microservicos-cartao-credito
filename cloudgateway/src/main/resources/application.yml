@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: ws-cloudgateway
+cloud:
+  gateway:
+    discovery:
+      locator:
+        enabled: true
+        lower-case-service-id: true
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://cursoms-eureka-user:123456@${EUREKA_SERVER}:8761/eureka
